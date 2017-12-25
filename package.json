@@ -1,0 +1,14 @@
+{
+  "name": "rtd-sign",
+  "version": "1.0.0",
+  "description": "Display RTD Train Times on RPi LED Display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Sobota",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.20.1"
+  }
+}
