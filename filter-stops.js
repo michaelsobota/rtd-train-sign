@@ -22,10 +22,10 @@ function loadAndFilter(myStop) {
 	});
 
 	lineReader.on('close', function (line) {
-	    fs.writeFile('./data_feeds/filtered_stops.json', JSON.stringify(output), (err) => {
+	    fs.writeFile('./data_feeds/filtered/filtered_stops.json', JSON.stringify(output), (err) => {
 	    	if (err) throw err;
 	    });
 	});
 }
 
-loadAndFilter("34008");
+loadAndFilter(prcoess.arv[2]);
