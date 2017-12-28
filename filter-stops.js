@@ -27,5 +27,5 @@ function loadAndFilter(myStop) {
 	    });
 	});
 }
-
-loadAndFilter(prcoess.arv[2]);
+console.log("Processing stop_times.txt");
+loadAndFilter(process.argv[2]);

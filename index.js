@@ -22,7 +22,7 @@ function scheduleChecker() {
 		depart = moment(stop_data[trip].departure_time, "HH:mm:ss");
 		if(depart.diff(moment(), 'minutes') <= 20 && depart.diff(moment(), 'minutes') >= 0) { //check TIME
 			if(_.where(cal_data, {service_id: _.where(trip_data, {trip_id: stop_data[trip].trip_id})[0].service_id})[0] !== undefined && _.where(cal_data, {service_id: _.where(trip_data, {trip_id: stop_data[trip].trip_id})[0].service_id})[0][dayname] === "1") {
-				console.log(_.where(trip_data, {trip_id: stop_data[trip].trip_id})[0].trip_headsign, depart.diff(moment(), 'minutes'), "minutes - ", stop_data[trip].trip_id);
+				console.log(_.where(trip_data, {trip_id: stop_data[trip].trip_id})[0].trip_headsign, depart.diff(moment(), 'minutes'), "minutes");
 			} //for each stop_time that is within 20 minutes, check trip service_id against schedule data and print
 		}
 	}
