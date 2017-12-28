@@ -2,6 +2,7 @@
 
 //import modules
 var fs = require('fs');
+var moment = require('moment');
 
 //define a function to load and filter the file. TODO: possibly export this as a module
 function loadAndFilter() {
@@ -26,7 +27,10 @@ function loadAndFilter() {
 	    jsonFromLine.saturday = lineSplit[8];
 	    jsonFromLine.sunday = lineSplit[9];
 	    // ...  place more columns here if you need them
-	    output.push(jsonFromLine);
+	    if(moment(jsonFromLine.start_date, "YYYYMMDD") < moment(moment(), "YYYYMMDD") && moment(moment(), "YYYYMMDD") < moment(jsonFromLine.end_date, "YYYYMMDD")) {
+	    	output.push(jsonFromLine);
+	    }
+	    
 	});
 
 	//when the stream closes, write the results to a file
