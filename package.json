@@ -4,12 +4,17 @@
   "description": "Display RTD Train Times on RPi LED Display",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-data": "chmod u+x getData.sh && ./getData.sh",
+    "load-stops": "node filter-stops.js 34008",
+    "load-trips": "node filter-trips.js 101C,101D,101E,101F,101H,107R",
+    "load-cal": "node filter-calendar.js",
+    "load-all": "npm run-script get-data && npm run-script load-stops && npm run-script load-trips && npm run-script load-cal"
   },
   "author": "Michael Sobota",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "underscore": "^1.8.3"
   }
