@@ -29,7 +29,7 @@ function scheduleChecker() {
 }
 
 function run(){
-	setInterval(scheduleChecker, 5000);
+	setInterval(scheduleChecker, 30000);
 }
 
 run();
