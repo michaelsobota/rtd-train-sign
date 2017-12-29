@@ -13,6 +13,10 @@ To run:
 
 `npm start`
 
-As of now, the load-all script will pull RTD data in the Google Transit Feed Specification format, and filter it down to NB trains from the Arapahoe at Village Center Station. The main program will then read this data and print out trains departing in the next 20 minutes.
+As of now, the load-all script will pull RTD data formatted in the Google Transit Feed Specification format and filter it down to NB trains from the Arapahoe at Village Center Station. The main program will then read this data and print out trains departing in the next 20 minutes.
 
 The goal will be to use this data to feed an assembled LED RGB display driven by an FPGA and hang the sign in our offices.
+
+https://www.adafruit.com/product/2278
+
+https://learn.adafruit.com/fpga-rgb-matrix
